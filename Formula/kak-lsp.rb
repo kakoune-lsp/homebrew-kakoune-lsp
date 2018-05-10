@@ -7,7 +7,9 @@ class KakLsp < Formula
 
   def install
     bin.install "kak-lsp"
-    bin.install "kak-lsp.toml"
+    #bin.install "kak-lsp.toml"
+    system "mkdir", "-p", "~/.config/kak-lsp"
+    system "cp", "-n", "kak-lsp.toml", "~/.config/kak-lsp/"
     system "mkdir", "-p", "~/.config/kak/autoload"
     system "cp", "lsp.kak", "~/.config/kak/autoload/"
   end
