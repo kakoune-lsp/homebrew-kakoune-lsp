@@ -31,12 +31,17 @@ class KakLsp < Formula
           <string>#{plist_name}</string>
           <key>ProgramArguments</key>
           <array>
+            <string>/bin/bash</string>
+            <string>-l</string>
+            <string>-c</string>
             <string>#{bin}/kak-lsp</string>
           </array>
           <key>RunAtLoad</key>
           <true/>
           <key>KeepAlive</key>
           <true/>
+          <key>StandardErrorPath</key>
+          <string>/tmp/kak-lsp.log</string>
         </dict>
       </plist>
     EOS
