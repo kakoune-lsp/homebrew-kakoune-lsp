@@ -1,17 +1,22 @@
 class KakLsp < Formula
   desc "Kakoune Language Server Protocol Client"
   homepage "https://github.com/ul/kak-lsp/"
-  url "https://github.com/ul/kak-lsp/releases/download/v2.2.0/kak-lsp-v2.2.0-x86_64-apple-darwin.tar.gz"
-  sha256 "6a99c64b3894775cf44e5a0e02baed3518c9dc83d2bd93359f9ea8b66380f685"
-  version "2.2.0"
+  url "https://github.com/ul/kak-lsp/releases/download/v2.2.1/kak-lsp-v2.2.1-x86_64-apple-darwin.tar.gz"
+  sha256 "f398b47687e371f451fa294de1d744a8cae1c867b55f50e766c7ce26d91ff0c3"
+  version "2.2.1"
 
   def install
     bin.install "kak-lsp"
-    #bin.install "kak-lsp.toml"
-    system "mkdir", "-p", "~/.config/kak-lsp"
-    system "cp", "-n", "kak-lsp.toml", "~/.config/kak-lsp/"
-    system "mkdir", "-p", "~/.config/kak/autoload"
-    system "cp", "lsp.kak", "~/.config/kak/autoload/"
+    bin.install "kak-lsp.toml"
+    pkgshare.install "lsp.kak"
+  end
+
+  def caveats
+    <<~EOS
+      Due to Homebrew limitations you need to install/update lsp.kak manually:
+
+      cp #{pkgshare}/lsp.kak ~/.config/kak/autoload/
+    EOS
   end
 
   plist_options :startup => true
