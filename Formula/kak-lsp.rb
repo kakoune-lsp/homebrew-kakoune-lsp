@@ -10,6 +10,14 @@ class KakLsp < Formula
     bin.install "kak-lsp.toml"
   end
 
+  def caveats
+    <<~EOS
+      Be sure to put  %sh{kak-lsp --kakoune}  to your kakrc.
+      To customize kak-lsp copy default config from  #{bin}/kak-lsp.toml  to  ~/.config/kak-lsp/kak-lsp.toml  and edit it.
+      To not bother with manual start/restart run  brew services start ul/kak-lsp/kak-lsp  (better without sudo despite of brew suggestion to have relevant PATH available to kak-lsp to start language servers). 
+    EOS
+  end
+
   plist_options :startup => true
 
   def plist
