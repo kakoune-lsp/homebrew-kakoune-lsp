@@ -1,20 +1,28 @@
 class KakLsp < Formula
   desc "Kakoune Language Server Protocol Client"
   homepage "https://github.com/ul/kak-lsp/"
-  url "https://github.com/ul/kak-lsp/releases/download/v3.5.0/kak-lsp-v3.5.0-x86_64-apple-darwin.tar.gz"
-  sha256 "c762397e9afe341486ba5ee63d340de8ed0514ec1327b07502e15ea0f1e6a559"
-  version "3.5.0"
+  url "https://github.com/ul/kak-lsp/releases/download/v3.6.0/kak-lsp-v3.6.0-x86_64-apple-darwin.tar.gz"
+  sha256 "8484ae504123f22267dc3aa70aa829db4f0ee1d2a7d550e7a37bb7f640027dfa"
+  version "3.6.0"
 
   def install
     bin.install "kak-lsp"
-    bin.install "kak-lsp.toml"
+    share.install "kak-lsp.toml"
   end
 
   def caveats
     <<~EOS
-      Be sure to put  %sh{kak-lsp --kakoune}  to your kakrc.
-      To customize kak-lsp copy default config from  #{bin}/kak-lsp.toml  to  ~/.config/kak-lsp/kak-lsp.toml  and edit it.
-      To not bother with manual start/restart run  brew services start ul/kak-lsp/kak-lsp  (better without sudo despite of brew suggestion to have relevant PATH available to kak-lsp to start language servers). 
+      Be sure to put
+
+        %sh{kak-lsp --kakoune -s $kak_session}
+        lsp-start
+
+      into your kakrc.
+
+      To customize kak-lsp copy default config from #{share}/kak-lsp.toml to ~/.config/kak-lsp/kak-lsp.toml and edit it.
+
+      Provided service might be useful if you are using kak-lsp in TCP mode.
+      It's not needed for default integration described above.
     EOS
   end
 
