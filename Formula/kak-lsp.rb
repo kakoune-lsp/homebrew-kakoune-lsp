@@ -1,9 +1,9 @@
 class KakLsp < Formula
   desc "Kakoune Language Server Protocol Client"
   homepage "https://github.com/ul/kak-lsp/"
-  url "https://github.com/ul/kak-lsp/releases/download/v4.0.0/kak-lsp-v4.0.0-x86_64-apple-darwin.tar.gz"
-  sha256 "a25b87b42c234b334d5454e1218eb3b55f302d43039b44582a67d99e5456b88c"
-  version "4.0.0"
+  url "https://github.com/ul/kak-lsp/releases/download/v5.0.0/kak-lsp-v5.0.0-x86_64-apple-darwin.tar.gz"
+  sha256 "5e492a5197ed5672042af6a4de5bf0b94b9df3a29c61e60221cbd34f68f33aab"
+  version "5.0.0"
 
   def install
     bin.install "kak-lsp"
@@ -14,7 +14,7 @@ class KakLsp < Formula
     <<~EOS
       Be sure to put
 
-        %sh{kak-lsp --kakoune -s $kak_session}
+        eval %sh{kak-lsp --kakoune -s $kak_session}
 
       into your kakrc.
 
