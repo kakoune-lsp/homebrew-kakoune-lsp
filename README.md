@@ -1,5 +1,5 @@
-To install [kak-lsp](https://github.com/ul/kak-lsp/) run
+To install [kak-lsp](https://github.com/kak-lsp/kak-lsp/) run
 
 ```
-brew install ul/kak-lsp/kak-lsp
+brew install kak-lsp/kak-lsp/kak-lsp
 ```
