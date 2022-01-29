@@ -2,7 +2,7 @@ class KakLsp < Formula
   desc "Kakoune Language Server Protocol Client"
   homepage "https://github.com/kak-lsp/kak-lsp/"
   url "https://github.com/kak-lsp/kak-lsp/releases/download/v11.1.0/kak-lsp-v11.1.0-x86_64-apple-darwin.tar.gz"
-  sha256 "894d932ce8ac9df08932c5df2e1558c277735848f02e587aed0967c5fb9b7c33"
+  sha256 "05f11452285b069e590e4ffa8c6a9317472ed39677ebf597ea46bb69d85eddf8"
   version "11.1.0"
 
   def install
