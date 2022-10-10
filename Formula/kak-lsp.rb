@@ -19,7 +19,7 @@ class KakLsp < Formula
 
       into your kakrc.
 
-      To customize kak-lsp copy default config from #{share}/kak-lsp.toml to ~/Library/Preferences/kak-lsp/kak-lsp.toml and edit it.
+      To customize kak-lsp copy default config from #{share}/kak-lsp.toml to ~/.config/kak-lsp/kak-lsp.toml and edit it.
     EOS
   end
 
