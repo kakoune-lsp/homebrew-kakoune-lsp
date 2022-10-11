@@ -20,6 +20,7 @@ class KakLsp < Formula
       into your kakrc.
 
       To customize kak-lsp copy default config from #{share}/kak-lsp.toml to ~/.config/kak-lsp/kak-lsp.toml and edit it.
+      If you are on Apple Silicon, make sure to install Rosetta using `softwareupdate --install-rosetta` (native version is work in progress).
     EOS
   end
 
