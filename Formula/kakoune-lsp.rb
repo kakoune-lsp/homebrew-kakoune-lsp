@@ -7,19 +7,18 @@ class KakouneLsp < Formula
 
   def install
     bin.install "kak-lsp"
-    share.install "kak-lsp.toml"
   end
 
   def caveats
     <<~EOS
-      Be sure to put
+      For the default config, put
 
-        eval %sh{kak-lsp --kakoune -s $kak_session}
+        eval %sh{kak-lsp}
         lsp-enable
 
       into your kakrc.
 
-      To customize kak-lsp copy default config from #{share}/kak-lsp.toml to ~/.config/kak-lsp/kak-lsp.toml and edit it.
+      To customize the behavior, see https://github.com/kakoune-lsp/kakoune-lsp/blob/v#{version}/README.asciidoc
       If you are on Apple Silicon, make sure to install Rosetta using `softwareupdate --install-rosetta` (native version is work in progress).
     EOS
   end
