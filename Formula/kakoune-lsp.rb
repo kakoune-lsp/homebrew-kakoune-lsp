@@ -1,9 +1,14 @@
 class KakouneLsp < Formula
   desc "Kakoune Language Server Protocol Client"
   homepage "https://github.com/kakoune-lsp/kakoune-lsp/"
-  url "https://github.com/kakoune-lsp/kakoune-lsp/releases/download/v18.0.2/kakoune-lsp-v18.0.2-x86_64-apple-darwin.tar.gz"
-  sha256 "4c600a3f17adf5f8ee802da857ea27fae9f0ffccc89414b35402e2259dad42cc"
-  version "18.0.2"
+  if Hardware::CPU.arm?
+url "https://github.com/kakoune-lsp/kakoune-lsp/releases/download/v18.0.3/kakoune-lsp-v18.0.3-aarch64-apple-darwin.tar.gz"
+sha256 "b3628d9a57cb3604fb83d6ca4cff2c50adb3e6fe1d0903665c4a40f9660907e4"
+  else
+url "https://github.com/kakoune-lsp/kakoune-lsp/releases/download/v18.0.3/kakoune-lsp-v18.0.3-x86_64-apple-darwin.tar.gz"
+sha256 "e45b84b0ba55a9558b69b3fcb1f5e6070abfdbc74c1c680c547e1c02255fced0"
+  end
+version "18.0.3"
 
   def install
     bin.install "kak-lsp"
@@ -19,7 +24,6 @@ class KakouneLsp < Formula
       into your kakrc.
 
       To customize the behavior, see https://github.com/kakoune-lsp/kakoune-lsp/blob/v#{version}/README.asciidoc
-      If you are on Apple Silicon, make sure to install Rosetta using `softwareupdate --install-rosetta` (native version is work in progress).
     EOS
   end
 
