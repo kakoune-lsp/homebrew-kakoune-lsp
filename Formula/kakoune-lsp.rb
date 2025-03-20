@@ -2,13 +2,13 @@ class KakouneLsp < Formula
   desc "Kakoune Language Server Protocol Client"
   homepage "https://github.com/kakoune-lsp/kakoune-lsp/"
   if Hardware::CPU.arm?
-    url "https://github.com/kakoune-lsp/kakoune-lsp/releases/download/v18.1.2/kakoune-lsp-v18.1.2-aarch64-apple-darwin.tar.gz"
-    sha256 "9e9c37136d0b065263ebfb304b2b47fda021a7dde8555caaad4d537881a1fafb"
+    url "https://github.com/kakoune-lsp/kakoune-lsp/releases/download/v18.1.3/kakoune-lsp-v18.1.3-aarch64-apple-darwin.tar.gz"
+    sha256 "74ae4461f36591ce99d8ebf121c7c8d43391fefff72e419c56b20cbbbf4e6b43"
   else
-    url "https://github.com/kakoune-lsp/kakoune-lsp/releases/download/v18.1.2/kakoune-lsp-v18.1.2-x86_64-apple-darwin.tar.gz"
-    sha256 "bd5a00cf6bd77bdad7ab74948e9c16b197548d5e85510494240e4c122e01e576"
+    url "https://github.com/kakoune-lsp/kakoune-lsp/releases/download/v18.1.3/kakoune-lsp-v18.1.3-x86_64-apple-darwin.tar.gz"
+    sha256 "2790b3a76f480b7f6ee0e60f4b368299b2c979f2b7094254036cd9945b213036"
   end
-  version "18.1.2"
+  version "18.1.3"
 
   def install
     bin.install "kak-lsp"
