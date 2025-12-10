@@ -5,16 +5,16 @@ class KakouneLsp < Formula
   version "18.2.0"
 
   if Hardware::CPU.arm?
-    url "https://github.com/kakoune-lsp/kakoune-lsp/releases/download/v19.0.0/kakoune-lsp-v19.0.0-aarch64-apple-darwin.tar.gz"
-    sha256 "77a997f390363d5e298fdcdb0ff99019e7b77b0a981f8678e8c602fdf36754cb"
+    url "https://github.com/kakoune-lsp/kakoune-lsp/releases/download/v19.0.1/kakoune-lsp-v19.0.1-aarch64-apple-darwin.tar.gz"
+    sha256 "92e3bc805db1c087f2e388724c57f22c2d1727888b1b691ddcf05791bcb71086"
   else
     on_macos do
-      url "https://github.com/kakoune-lsp/kakoune-lsp/releases/download/v19.0.0/kakoune-lsp-v19.0.0-x86_64-apple-darwin.tar.gz"
-      sha256 "9bad179ca2f5f21305b81ca2d2133ae9ec26bc30d403fe1a480e3913c7ded482"
+      url "https://github.com/kakoune-lsp/kakoune-lsp/releases/download/v19.0.1/kakoune-lsp-v19.0.1-x86_64-apple-darwin.tar.gz"
+      sha256 "4189e501dc320c3eb666fbd56447f0f9f827d96f5e61fd349d62a36e30143300"
     end
     on_linux do
-      url "https://github.com/kakoune-lsp/kakoune-lsp/releases/download/v19.0.0/kakoune-lsp-v19.0.0-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "f03583bea106a0c5544aa3dc592d0993653ba940b72ceafcdcd8ea06a0b0a1d5"
+      url "https://github.com/kakoune-lsp/kakoune-lsp/releases/download/v19.0.1/kakoune-lsp-v19.0.1-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "8061d1ee84728a422470893f5bc119bbc36e4216847e822169983065243a3979"
     end
   end
 
