@@ -2,7 +2,7 @@
 class KakouneLsp < Formula
   desc "Kakoune Language Server Protocol Client"
   homepage "https://github.com/kakoune-lsp/kakoune-lsp/"
-  version "18.2.0"
+  version "19.0.1"
 
   if Hardware::CPU.arm?
     url "https://github.com/kakoune-lsp/kakoune-lsp/releases/download/v19.0.1/kakoune-lsp-v19.0.1-aarch64-apple-darwin.tar.gz"
