@@ -2,19 +2,19 @@
 class KakouneLsp < Formula
   desc "Kakoune Language Server Protocol Client"
   homepage "https://github.com/kakoune-lsp/kakoune-lsp/"
-  version "21.0.0"
+  version "21.0.1"
 
   if Hardware::CPU.arm?
-    url "https://github.com/kakoune-lsp/kakoune-lsp/releases/download/v21.0.0/kakoune-lsp-v21.0.0-aarch64-apple-darwin.tar.gz"
-    sha256 "b2bc2f91f00fc16330c51012025a7143b2c8b76caa246b07eb1fa4bd51c6b5c1"
+    url "https://github.com/kakoune-lsp/kakoune-lsp/releases/download/v21.0.1/kakoune-lsp-v21.0.1-aarch64-apple-darwin.tar.gz"
+    sha256 "a1b3a56c6269aa056d7d93b8e5cf30843bc12d5f001ba9e5520b81c8f17354ce"
   else
     on_macos do
-      url "https://github.com/kakoune-lsp/kakoune-lsp/releases/download/v21.0.0/kakoune-lsp-v21.0.0-x86_64-apple-darwin.tar.gz"
-      sha256 "9379dfe8ee88a58ea4526242480a4421470cbe655117d27922df76d46a0e73ec"
+      url "https://github.com/kakoune-lsp/kakoune-lsp/releases/download/v21.0.1/kakoune-lsp-v21.0.1-x86_64-apple-darwin.tar.gz"
+      sha256 "952e9c19b2d433f8a1642e658f558e3fa4b145e3cffdbc02f94974483a9c3dde"
     end
     on_linux do
-      url "https://github.com/kakoune-lsp/kakoune-lsp/releases/download/v21.0.0/kakoune-lsp-v21.0.0-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "f4401b19504bcea73f2ddf3b722407a5005e7e53d44e937831355b1b88e02645"
+      url "https://github.com/kakoune-lsp/kakoune-lsp/releases/download/v21.0.1/kakoune-lsp-v21.0.1-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "f6c98d4c8f2ba6a59646f7b23fad81699597213a885133d08f3c19b6e1dd34e5"
     end
   end
 
